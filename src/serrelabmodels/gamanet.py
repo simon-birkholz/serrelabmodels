@@ -15,8 +15,8 @@ import torch
 import numpy as np
 from torch.nn import init
 
-from serrelabmodels.layers.fgru_base import fGRUCell
-from serrelabmodels.layers.fgru_base import fGRUCell_topdown as fGRUCell_td
+from serrelabmodels.layers.fgru_cell import fGRUCell
+from serrelabmodels.layers.fgru_cell import fGRUCell_topdown as fGRUCell_td
 
 from serrelabmodels.utils.pt_utils import Conv2dSamePadding
 from serrelabmodels.utils import pt_utils
@@ -29,8 +29,8 @@ vgg_example={
     'import_class': 'VGG_16',
     'args': {
         'weight_path': '/media/data_cifs/model_weights/vgg16.pth',
-        'load_weights': True,
-        'freeze_layers': True,
+        'load_weights': False,
+        'freeze_layers': False,
         'n_layers': 17
     }
 }
